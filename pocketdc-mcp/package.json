@@ -1,0 +1,18 @@
+{
+  "name": "pocketdc-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for FinOps cost checking and budget guardrails in Kiro IDE",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["mcp", "finops", "cost-checking", "kiro", "cloud-costs"],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.1",
+    "zod": "^3.25.76"
+  }
+}
