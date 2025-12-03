@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "FinOps Cost Check on Service Save",
+  "description": "Automatically triggers PocketDC FinOps cost check when service specs are saved",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/.kiro/specs/*.service.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A service specification file has been saved. Please perform a PocketDC FinOps cost check:\n\n1. Read the saved service spec file\n2. Extract the service_name and max_cost from the file\n3. Call the MCP tool mcp_pocketdc_mcp_get_estimated_cost with the service_name\n4. Compare the estimated cost against max_cost\n5. Update the FinOps Report block in the file with the results\n6. Show whether the service is OVER_BUDGET or WITHIN_BUDGET\n\nPlease complete this cost analysis and update the file accordingly."
+  },
+  "workspaceFolderName": "kiroween_projects",
+  "shortName": "finops-cost-check"
+}
