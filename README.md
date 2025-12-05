@@ -54,6 +54,7 @@ pocketdc-kiro/
 │  ├─ package.json
 │  ├─ package-lock.json
 │  └─ node_modules/                      # Local dependencies
+├─ LICENSE                               # MIT open-source license
 └─ README.md
 ```
 
@@ -61,7 +62,7 @@ pocketdc-kiro/
 
 1. Developer edits `.kiro/specs/pocketdc.service.md`
 2. Developer presses **Save**
-3. Hook `finops-cost-check.kiro.hook` triggers on `fileEdited` for `**/.kiro/specs/*.service.md`
+3. Hook `finops-cost-check.kiro.hook` triggers on `fileSaved` for `**/*.service.md` in `.kiro/specs/`
 4. Kiro Agent:
    - reads the spec
    - extracts `service_name` and `max_cost`
@@ -81,7 +82,7 @@ pocketdc-kiro/
 ### 1. Clone this repo
 
 ```bash
-git clone <THIS-REPO-URL> pocketdc-kiro
+git clone https://github.com/trunghafromvietnam/pocketdc pocketdc-kiro
 cd pocketdc-kiro
 ```
 
